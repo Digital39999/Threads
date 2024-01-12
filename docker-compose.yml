@@ -1,0 +1,12 @@
+version: '3'
+services:
+  threads:
+    container_name: threads-bot
+    pull_policy: build
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    labels:
+      - "traefik.enable=false"
